@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Chat</string>
-</resources>
+        <string name="welcome_msg">Bem-Vido!</string>
+        <string name="sign_out">Sair</string>
+        <string name="contacts_permission_rationale">É necessário acesso às informações da conta para fazer login.</string>
+        <string name="invite_menu_label">Convite</string>
+        <string name="invitation_message">Junte-se a mim para um bate-papo amigável</string>
+        <string name="invitation_cta">Apelo à ação</string>
+        <string name="invitation_title">Convite para bate-papo amigável</string>
+        <string name="sign_in">Inscreva-se</string>
+        <string name="sign_up">Login</string>
+        <string name="fresh_config">Configuração nova</string>
+        <string name="cause_crash">Causar Crash</string>
+        <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    </resources>
+
