@@ -1,6 +1,6 @@
 package com.example.chat;
 
-public class Mensseger {
+public class MenssegerMigs {
 
     private String id;
     private String text;
@@ -8,10 +8,10 @@ public class Mensseger {
     private String photoUrl;
     private String imageUrl;
 
-    public Mensseger() {
+    public MenssegerMigs() {
     }
 
-    public Mensseger(String text, String name, String photoUrl, String imageUrl) {
+    public MenssegerMigs(String text, String name, String photoUrl, String imageUrl) {
         this.text = text;
         this.name = name;
         this.photoUrl = photoUrl;
