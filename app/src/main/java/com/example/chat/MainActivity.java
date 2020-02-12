@@ -46,7 +46,7 @@ import com.google.firebase.storage.StorageReference;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class MainActivity extends AppCompatActivity  implements GoogleApiClient.OnConnectionFailedListener {
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
     public static class MessageViewHolder extends RecyclerView.ViewHolder {
         TextView messageTextView;
@@ -163,8 +163,6 @@ public class MainActivity extends AppCompatActivity  implements GoogleApiClient.
                 // Select image for image message on click.
             }
         });
-//    }
-
 
         // New child entries
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
@@ -264,57 +262,57 @@ public class MainActivity extends AppCompatActivity  implements GoogleApiClient.
         mMessageRecyclerView.setAdapter(mFirebaseAdapter);
     }
 
-        @Override
-        public void onStart () {
-            super.onStart();
-            // Check if user is signed in.
-            // TODO: Add code to check if user is signed in.
-        }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in.
+        // TODO: Add code to check if user is signed in.
+    }
 
-        @Override
-        public void onPause () {
-            mFirebaseAdapter.stopListening();
-            super.onPause();
-        }
+    @Override
+    public void onPause() {
+        mFirebaseAdapter.stopListening();
+        super.onPause();
+    }
 
-        @Override
-        public void onResume () {
-            super.onResume();
-            mFirebaseAdapter.startListening();
-        }
+    @Override
+    public void onResume() {
+        super.onResume();
+        mFirebaseAdapter.startListening();
+    }
 
-        @Override
-        public void onDestroy () {
-            super.onDestroy();
-        }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 
-        @Override
-        public boolean onCreateOptionsMenu (Menu menu){
-            MenuInflater inflater = getMenuInflater();
-            inflater.inflate(R.menu.menu_main, menu);
-            return true;
-        }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
-        @Override
-        public boolean onOptionsItemSelected (MenuItem item){
-            switch (item.getItemId()) {
-                case R.id.sign_out_menu:
-                    mFirebaseAuth.signOut();
-                    Auth.GoogleSignInApi.signOut(mGoogleApiClient);
-                    mUsername = ANONYMOUS;
-                    startActivity(new Intent(this, LoginActivity.class));
-                    finish();
-                    return true;
-                default:
-                    return super.onOptionsItemSelected(item);
-            }
-        }
-
-        @Override
-        public void onConnectionFailed (@NonNull ConnectionResult connectionResult){
-            // An unresolvable error has occurred and Google APIs (including Sign-In) will not
-            // be available.
-            Log.d(TAG, "onConnectionFailed:" + connectionResult);
-            Toast.makeText(this, "Google Play Services error.", Toast.LENGTH_SHORT).show();
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.sign_out_menu:
+                mFirebaseAuth.signOut();
+                Auth.GoogleSignInApi.signOut(mGoogleApiClient);
+                mUsername = ANONYMOUS;
+                startActivity(new Intent(this, LoginActivity.class));
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        // An unresolvable error has occurred and Google APIs (including Sign-In) will not
+        // be available.
+        Log.d(TAG, "onConnectionFailed:" + connectionResult);
+        Toast.makeText(this, "Google Play Services error.", Toast.LENGTH_SHORT).show();
+    }
+}
