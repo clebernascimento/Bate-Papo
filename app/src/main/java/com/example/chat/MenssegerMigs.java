@@ -58,4 +58,3 @@ public class MenssegerMigs {
         this.imageUrl = imageUrl;
     }
 }
-
