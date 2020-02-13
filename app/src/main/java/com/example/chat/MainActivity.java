@@ -174,6 +174,44 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             }
         });
 
+        @Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+            Log.d(TAG, "onActivityResult: requestCode=" + requestCode + ", resultCode=" + resultCode);
+
+            if (requestCode == REQUEST_IMAGE) {
+                if (resultCode == RESULT_OK) {
+                    if (data != null) {
+                        final Uri uri = data.getData();
+                        Log.d(TAG, "Uri: " + uri.toString());
+
+                        FriendlyMessage tempMessage = new FriendlyMessage(null, mUsername, mPhotoUrl,
+                                LOADING_IMAGE_URL);
+                        mFirebaseDatabaseReference.child(MESSAGES_CHILD).push()
+                                .setValue(tempMessage, new DatabaseReference.CompletionListener() {
+                                    @Override
+                                    public void onComplete(DatabaseError databaseError,
+                                                           DatabaseReference databaseReference) {
+                                        if (databaseError == null) {
+                                            String key = databaseReference.getKey();
+                                            StorageReference storageReference =
+                                                    FirebaseStorage.getInstance()
+                                                            .getReference(mFirebaseUser.getUid())
+                                                            .child(key)
+                                                            .child(uri.getLastPathSegment());
+
+                                            putImageInStorage(storageReference, uri, key);
+                                        } else {
+                                            Log.w(TAG, "Unable to write message to database.",
+                                                    databaseError.toException());
+                                        }
+                                    }
+                                });
+                    }
+                }
+            }
+        }
+
         // New child entries
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
         SnapshotParser<MenssegerMigs> parser = new SnapshotParser<MenssegerMigs>() {
