@@ -1,22 +1,16 @@
 
-Psquid:S1068J"-Remove this unused "mUsername" private field.(ÙïŠÏıÿÿÿÿ8ãí¶±ƒ.
-usquid:S3776_"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(¨Œşÿÿÿÿ8ˆ„Êƒ.
- squid:S1186†"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(á¬‡İ8õ„³Øƒ.
-osquid:S1301ª"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8 Ôâ±ƒ.
-¥squid:S1186“"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×åó«øÿÿÿÿ8õ„³Øƒ.
-vsquid:S1450K"XRemove the "mPhotoUrl" field and declare it as a local variable in the relevant methods.(¤¾İÈ8õ„³Øƒ.
-Ksquid:S1068K"-Remove this unused "mPhotoUrl" private field.(¤¾İÈ8ãí¶±ƒ.
-Œsquid:S1450Z"iRemove the "mFirebaseDatabaseReference" field and declare it as a local variable in the relevant methods.(Ç²Ûæúÿÿÿÿ8ˆ„Êƒ.
-Tsquid:S1068E"1Remove this unused "REQUEST_IMAGE" private field.(Æ†ºŞûÿÿÿÿ8ãí¶±ƒ.
-}squid:S1450T"_Remove the "mMessageEditText" field and declare it as a local variable in the relevant methods.(õë±œ8õ„³Øƒ.
-Xsquid:S1068F"5Remove this unused "LOADING_IMAGE_URL" private field.(¶Üê³üÿÿÿÿ8ãí¶±ƒ.
-Tsquid:S1068I"6Remove this unused "MESSAGE_SENT_EVENT" private field.(èı¡Ö8ãí¶±ƒ.
-Tsquid:S1068L"6Remove this unused "mSharedPreferences" private field.(ÖØÂê8ãí¶±ƒ.
-Rsquid:S1068N"/Remove this unused "MESSAGE_URL" private field.(¯Œëµıÿÿÿÿ8ãí¶±ƒ.
-Usquid:S1068D"2Remove this unused "REQUEST_INVITE" private field.(Ù¤œûÿÿÿÿ8ãí¶±ƒ.
-squid:S1450Y"\Remove the "mFirebaseUser" field and declare it as a local variable in the relevant methods.(ÔÛïÁÿÿÿÿÿ8õ„³Øƒ.
-Rsquid:S1905|"/Remove this unnecessary cast to "RecyclerView".(ô¸¸¶üÿÿÿÿ8şÇ³Øƒ.
-†squid:S1450U"cRemove the "mAddMessageImageView" field and declare it as a local variable in the relevant methods.(çÅúÃøÿÿÿÿ8õ„³Øƒ.
-asquid:S1126‹"BReplace this if-then-else statement by a single method invocation.(ğ¯¨œ8õ„³Øƒ.
-squid:S1450L"aRemove the "mSharedPreferences" field and declare it as a local variable in the relevant methods.(ÖØÂê8õ„³Øƒ.
-Qsquid:S1135"2Complete the task associated to this TODO comment.(¨…üã8Ùº±ƒ.
+Ssquid:S1066Ò"/Merge this if statement with the enclosing one.(±„‘‰ıÿÿÿÿ8Ğêí„.
+Nsquid:S1066Ó"/Merge this if statement with the enclosing one.(ß¸é8Ğêí„.
+osquid:S1301·"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8Ğêí„.
+squid:S1450O"aRemove the "mSharedPreferences" field and declare it as a local variable in the relevant methods.(ÖØÂê8Ğêí„.
+†squid:S1450X"cRemove the "mAddMessageImageView" field and declare it as a local variable in the relevant methods.(çÅúÃøÿÿÿÿ8Ğêí„.
+usquid:S3776b"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(¨Œşÿÿÿÿ8Ğêí„.
+Rsquid:S1905p"/Remove this unnecessary cast to "RecyclerView".(ô¸¸¶üÿÿÿÿ8Ğêí„.
+Ÿsquid:S1186z"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(á¬‡İ8Ğêí„.
+¥squid:S1186‡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×åó«øÿÿÿÿ8Ğêí„.
+`squid:S1126"BReplace this if-then-else statement by a single method invocation.(ğ¯¨œ8Ğêí„.
+Qsquid:S1135š"2Complete the task associated to this TODO comment.(¨…üã8Ğêí„.
+Usquid:S1068G"2Remove this unused "REQUEST_INVITE" private field.(Ù¤œûÿÿÿÿ8Ğêí„.
+Tsquid:S1068L"6Remove this unused "MESSAGE_SENT_EVENT" private field.(èı¡Ö8Ğêí„.
+Tsquid:S1068O"6Remove this unused "mSharedPreferences" private field.(ÖØÂê8Ğêí„.
+Rsquid:S1068Q"/Remove this unused "MESSAGE_URL" private field.(¯Œëµıÿÿÿÿ8Ğêí„.
